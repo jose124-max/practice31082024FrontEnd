@@ -1,0 +1,59 @@
+/* Estilo general para el contenedor principal */
+.admin-panel-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para los encabezados */
+  .admin-panel-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .admin-panel-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los formularios */
+  .admin-panel-container div {
+    margin-bottom: 30px;
+  }
+  
+  .admin-panel-container input,
+  .admin-panel-container textarea,
+  .admin-panel-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .admin-panel-container textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .admin-panel-container button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-panel-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para la lista de hoteles */
+  .admin-panel-container select {
+    background-color: #f9f9f9;
+  }
+  

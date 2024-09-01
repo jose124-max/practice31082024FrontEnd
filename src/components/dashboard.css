@@ -1,0 +1,13 @@
+.navbar{
+    background-color: aliceblue;
+    margin: 0;
+    display: flex;
+}
+.navbar button{
+    margin: auto 10px auto auto;
+    height: 50px;
+    padding: 0 10px;
+    background-color: #db1f48;
+    color: white;
+    cursor: pointer;
+}

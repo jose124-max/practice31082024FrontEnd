@@ -1,0 +1,40 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el encabezado */
+  .login-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el botón de inicio de sesión */
+  .login-container button {
+    background-color: #4285f4; /* Color de fondo del botón */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+  }
+  
+  /* Estilo para el botón al pasar el cursor */
+  .login-container button:hover {
+    background-color: #357ae8; /* Color de fondo al pasar el cursor */
+  }
+  
+  /* Estilo para el texto del botón */
+  .login-container button:focus {
+    outline: none; /* Elimina el contorno del botón al hacer clic */
+  }
