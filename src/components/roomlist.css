@@ -1,12 +1,11 @@
-/* Estilos para el contenedor de la lista de habitaciones */
+
 .room-list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
-  
-  /* Estilos para el contenedor de las tarjetas de habitaciones */
+
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -14,8 +13,7 @@
     justify-content: center;
     margin-bottom: 20px;
   }
-  
-  /* Estilos para cada tarjeta de habitación */
+
   .card {
     background-color: #f9f9f9;
     border-radius: 8px;

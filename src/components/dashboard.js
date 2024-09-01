@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { auth, signOut } from '../firebase';  // Asegúrate de ajustar la ruta correctamente
+import { auth, signOut } from '../firebase'; 
 import AdminPanel from './AdminPanel';
 import RoomList from './roomlist';
 import './dashboard.css'

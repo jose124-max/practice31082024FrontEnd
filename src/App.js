@@ -1,4 +1,4 @@
-// src/App.js
+
 import React, { useState } from 'react';
 import Dashboard from './components/dashboard';
 import Login from './components/login';

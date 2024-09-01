@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { storage } from '../firebase';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import './adminpanel.css'; // Importa el archivo CSS
+import './adminpanel.css'; 
 
 const AdminPanel = () => {
   const [hotelName, setHotelName] = useState('');

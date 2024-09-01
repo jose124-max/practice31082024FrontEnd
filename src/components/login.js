@@ -2,7 +2,7 @@ import React from 'react';
 import { signInWithGoogle, auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import axios from 'axios';
-import './login.css'; // Importa el archivo CSS
+import './login.css'; 
 
 const Login = ({ setUser }) => {
   const handleLogin = () => {
@@ -10,7 +10,7 @@ const Login = ({ setUser }) => {
       const user = result.user;
       setUser(user);
 
-      // Enviar los datos del usuario al backend de Django
+
       axios.post('http://localhost:8000/api/register/', {
         uid: user.uid,
         email: user.email,

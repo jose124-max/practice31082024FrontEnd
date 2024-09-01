@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase'; // Asegúrate de importar auth aquí
+import { auth } from '../firebase'; 
 import './roomlist.css';
 
 const RoomList = () => {
   const [rooms, setRooms] = useState([]);
   const [reservations, setReservations] = useState([]);
-  const [user, setUser] = useState(null); // Almacena la información del usuario autenticado
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/rooms/')
@@ -18,14 +18,13 @@ const RoomList = () => {
         console.error('Error fetching rooms:', error);
       });
 
-    // Escuchar cambios en la autenticación
+
     const unsubscribe = onAuthStateChanged(auth, authenticatedUser => {
       if (authenticatedUser) {
-        setUser(authenticatedUser); // Establecer el usuario autenticado en el estado
+        setUser(authenticatedUser);
       }
     });
 
-    // Limpiar la suscripción cuando el componente se desmonte
     return () => unsubscribe();
 
   }, []);
@@ -33,19 +32,19 @@ const RoomList = () => {
   const handleReserve = (roomId) => {
     const reservedRoom = rooms.find(room => room.id === roomId);
     if (reservedRoom && user) {
-      // Realizar la solicitud POST para registrar la reserva en el backend
+
 
       const valor={room: reservedRoom.id,
-      user: user.uid, // Utilizar el UID del usuario autenticado
-      check_in: '2024-07-31', // Puedes reemplazar estas fechas con fechas dinámicas
+      user: user.uid, 
+      check_in: '2024-07-31',
       check_out: '2024-08-21'}
       console.log(valor);
 
 
       axios.post('http://localhost:8000/api/reservations/', {
         room: reservedRoom.id,
-        user: user.uid, // Utilizar el UID del usuario autenticado
-        check_in: '2024-07-31', // Puedes reemplazar estas fechas con fechas dinámicas
+        user: user.uid,
+        check_in: '2024-07-31', 
         check_out: '2024-08-21'
       })
       .then(response => {
